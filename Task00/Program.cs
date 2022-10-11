@@ -6,9 +6,26 @@
 
 Console.WriteLine("Введите трехзначное число ");
 int num = Convert.ToInt32(Console.ReadLine());
-while (num >= 100 && num <= 999)
+// while (num >= 100 && num <= 999)
+// {
+//     num = num / 10;
+// }
+// int secondDigit = num % 10;
+// Console.Write($"Вторая цифра числа: {secondDigit}");
+switch (num)
 {
-    num = num / 10;
+    case < 100:
+    Console.WriteLine("Число не трехзначное");
+    break;
+    case > 999:
+    Console.WriteLine("Число не трехзначное");
+    break;
+    case >= 100:
+    while (num >= 100 && num <= 999)
+    {
+        num = num / 10;
+    }
+    int secondDigit = num % 10;
+    Console.WriteLine($"Вторая цифра числа {secondDigit}");
+    break;
 }
-int secondDigit = num % 10;
-Console.Write($"Вторая цифра числа: {secondDigit}");
